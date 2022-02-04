@@ -1,0 +1,11 @@
+// Minha página principal JADE.
+doctype html
+html 
+    include ./includes/head.jade
+    body 
+        h1 Listagem de usuários do sistema
+
+        ul 
+            li #{user.nome} #{user.email}
+        include ./includes/footer.jade
+//li #[user.nome] equivale a li=user.nome

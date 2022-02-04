@@ -1,0 +1,30 @@
+<style>
+.b{
+    heigth: 10x;
+    width: 100px;
+    background-color: black;
+    color: whitesmoke;
+    display: block;
+}
+.i{
+    heigth: 10x;
+    width: 100px;
+    background-color: red;
+    color: whitesmoke;
+    display: inline;
+}
+.td{
+    heigth: 10x;
+    width: 200px;
+    background-color: black;
+    color: whitesmoke;
+    display: table-column;
+}
+.ib{
+    heigth: 10x;
+    width: 100px;
+    background-color: red;
+    color: whitesmoke;
+    display: inline-block;
+}
+</style>

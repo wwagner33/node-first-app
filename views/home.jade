@@ -1,0 +1,21 @@
+// Minha página principal JADE.
+doctype html
+html 
+    include ./includes/head.jade
+    body 
+        nav 
+            .menu 
+                ul 
+                    li 
+                        a(href='/creaUser') Criar Usuário
+                    li 
+                        a(href='/listUsers') Listar Usuários  
+                    li 
+                        a(href='/altUser') Alterar Usuário 
+                    li 
+                        a(href='delUser') Remover Usuário 
+        h1 Minha primeira página JADE 
+        p Olá, pessoal. Essa é a minha primeira página criada em JADE 
+
+        include ./includes/footer.jade
+//li #[user.nome] equivale a li=user.nome
