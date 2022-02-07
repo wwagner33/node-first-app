@@ -1,0 +1,13 @@
+// Minha página principal JADE.
+doctype html
+html 
+    include ../includes/head.pug
+    body 
+        h1 Usuário removido com sucesso!
+        h2 Elementos restantes:
+        ul 
+            each user in listUsers
+                 li #{user.nome} #{user.email} #{user.telefone} #{user.data_nascimento} #{user.endereco} 
+            a(href='/') Home 
+        include ../includes/footer.pug
+

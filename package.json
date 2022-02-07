@@ -19,7 +19,7 @@
   "homepage": "https://github.com/wwagner33/node-first-app#readme",
   "dependencies": {
     "express": "^4.17.2",
-    "jade": "^1.11.0"
+    "pug": "^3.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

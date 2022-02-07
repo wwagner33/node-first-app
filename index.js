@@ -15,9 +15,12 @@ const ADDRESS = "10.0.2.15";
 //Criando usando rotas simples que estão no arquivo routes.js
 app.use('/',routes); //routes contem o objeto ROUTER, criado no arquivo routes.js
 
-app.set('view engine','jade');
+app.set('view engine','pug');
 app.set('views',path.join(__dirname,'views'));
 
+//Permitindo ler os valores enviados do navegador para o servidor usando Querystring. Exemplo: .../delUser?nome=fulano
+
+app.use(express.json);
 
 //Criando um servidor simples com o Node.js e o Express
 const server = app.listen(PORT,ADDRESS,()=>{

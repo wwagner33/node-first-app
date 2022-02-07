@@ -1,0 +1,15 @@
+// Minha página principal JADE.
+doctype html
+html 
+    include ../includes/head.pug
+    body 
+        h1 Listagem de usuários do sistema
+
+        ul 
+            each user in listUsers
+                -var target="/delUser?nome=" + user.nome
+                li #{user.nome} #{user.email} #{user.telefone} #{user.data_nascimento} #{user.endereco} 
+                    a(href= `${target}`) Deletar
+        include ../includes/footer.pug
+
+
