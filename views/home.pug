@@ -1,20 +1,11 @@
-// Minha página principal JADE.
+// Minha página principal PUG.
 doctype html
 html 
-    include ./includes/head.pug
+    include ./includes/header.pug
     body 
-        nav 
-            .menu 
-                ul 
-                    li 
-                        a(href='/creaUser') Criar Usuário
-                    li 
-                        a(href='/listUsers') Listar Usuários  
-                    li 
-                        a(href='/altUser') Alterar Usuário 
-                    li 
-                        a(href='delUser') Remover Usuário 
-        h1 Minha primeira página JADE 
-        p Olá, pessoal. Essa é a minha primeira página criada em JADE 
+        h1 Minha primeira página PUG 
+        p Olá, pessoal. Essa é a minha primeira página criada em PUG
+
+        script(src="script.js") 
 
         include ./includes/footer.pug

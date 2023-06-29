@@ -1,11 +1,12 @@
 {
   "name": "node-first-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Aplicvação exemplo",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/wwagner33/node-first-app#readme",
   "dependencies": {
     "express": "^4.17.2",
+    "ip": "^1.1.8",
     "pug": "^3.0.2"
   },
   "devDependencies": {

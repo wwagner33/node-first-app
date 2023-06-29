@@ -3,47 +3,52 @@
  * @author Wellington Wagner Ferreira Sarmento
  */
 
-
-let users=[];
+let users = [];
 
 //= [{nome:"",email:"",telefone:"",data_nascimento:"",endereco:""}];
 
-function insertUsers(paramUsers){
-    for(let cont=0;cont<paramUsers.length;cont++){
-        users.push(paramUsers[cont]);
+function insertUsers(paramUsers) {
+  for (let cont = 0; cont < paramUsers.length; cont++) {
+    users.push(paramUsers[cont]);
+  }
+  //users= paramUsers;
+}
+
+function insertUser(user) {
+  users.push(user);
+}
+
+function findName(nUser) {
+  for (let cont = 0; cont < users.length; cont++) {
+    if (users[cont].nome === nUser) {
+      return cont;
+    } else {
+      return null;
     }
-    //users= paramUsers;
+  }
 }
 
-function insertUser(user){
-    users.push(user);
-}
+function delUser(nUser) {
+  let idUser = findName(nUser);
 
-function findName(nUser){
-    for(let cont=0;cont<users.length;cont++){
-        if(users[cont].nome === nUser){
-            return cont;
-        } else {
-            return null;
-        }
-    }
-}
-
-function delUser(nUser){
-    let idUser = findName(nUser);
-
-    if(idUser!=null){
-        users.splice(idUser,1);
-        return users;
-    } else{
-        return "";
-    }
-}
-
-function listUsers(){
+  if (idUser != null) {
+    users.splice(idUser, 1);
     return users;
+  } else {
+    return "";
+  }
 }
-function findUser(nDate){
-    //find a user per Date
+
+function listUsers() {
+  return users;
 }
-module.exports = {insertUsers: insertUsers,insertUser: insertUser,delUser: delUser,listUsers: listUsers,findUser: findUser};
+function findUser(nDate) {
+  //find a user per Date
+}
+module.exports = {
+  insertUsers: insertUsers,
+  insertUser: insertUser,
+  delUser: delUser,
+  listUsers: listUsers,
+  findUser: findUser,
+};

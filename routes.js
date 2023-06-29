@@ -81,13 +81,22 @@ router.get('/',(req,res)=>{
    
     //Criacao de minha primeira pagina dinamica
     //res.send(html);
+    res.send(JSON.stringify(listUsers()));
+
+
+}); //()={} sendo utilizada como callback
+
+router.get('/creaUser',(req,res)=>{
+    listUsers.push(req.query.nome);
     res.render("home");
 
 
-}); // ()={} sendo utilizada como callback
+}); //()={} sendo utilizada como callback
 
 router.get('/listUsers',(req,res)=>{
-    res.render('./crud/listUsers',{listUsers: listUsers()});
+    //envia o array listUsers para o cliente
+    res.render("home",{listUsers: listUsers()});
+    // res.render('./crud/listUsers',{listUsers: listUsers()});
 
 });
 
@@ -100,9 +109,11 @@ router.get('/listUsers',(req,res)=>{
 router.get('/delUser',(req,res)=>{
 
     let target = req.query.nome;
-    let list = delUser(target);
+    let list = delUser(target); //remove o elemento
 
-    res.render('./crud/delUser',{listUsers: list});
+    res.send(JSON.stringify(listUsers)); //envia para o navegador a resposta
+
+    //res.render('./crud/delUser',{listUsers: list});
 });
 
 module.exports = router;
